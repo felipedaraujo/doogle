@@ -22,12 +22,12 @@ class App.main.home.searchDoogle
         dataType: 'JSON')
       .success (json) ->
         if json
-          $('.js-message').empty
-          $('.js-entry').html json.entry
-          $('.js-definition').html json.definition
+          $('.js-message').empty()
+          $('.js-entry').html(json.entry)
+          $('.js-definition').html(json.definition)
         else
-          $('.js-entry').empty
-          $('.js-definition').empty
-          $('.js-message').html 'Your result was not found'
+          $('.js-entry').empty()
+          $('.js-definition').empty()
+          $('.js-message').html('Your result was not found')
         return
       false

@@ -6,15 +6,38 @@ html, body {
 body {
   color: #fff;
   margin-bottom: 40px;
+  font-size: 16px;
+}
+
+p {
+  color: #a0a0a0
 }
 
 a {
   color: #fff;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 h1 {
   font-size: 56px;
 }
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: transparent;
+  margin-bottom: -2px;
+  border-bottom: 2px white solid;
+}
+
+a:hover, a:focus {
+  color: white;
+  font-weight: bold;
+}
+
 
 .footer {
   position: absolute;

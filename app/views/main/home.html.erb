@@ -1,5 +1,4 @@
-<div class="container">
-
+<header class="col-md-8 col-md-offset-2">
   <nav class="navbar nav-bar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -12,38 +11,38 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Hire me</a></li>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><a href="https://github.com/felipedaraujo/doogle">Source</a></li>
+          <li><a href="mailto:me@felipedearaujo.com?Subject=Venha%20segunda-feira">Hire me</a></li>
         </ul>
       </div>
     </div>
   </nav>
+</header>
 
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <center>
-        <h1>Doogle</h1>
-        <%= form_tag('search', method: :get, remote: true, class: "js-search-doogle") do %>
-          <div class="form-group">
-            <%= text_field_tag :query, nil, class: "js-query form-control" %>
-          </div>
-          <%= submit_tag 'Doogle Search', class: 'btn btn-default' %>
-        <% end %>
-
-        <h3 class="js-message"></h3>
-      </center>
-
-      <h3 class="js-entry"></h3>
-      <p class="js-definition"></p>
-    </div>
-  </div>
-
-  <footer class="footer">
+<section class="row">
+  <div class="col-md-6 col-md-offset-3">
     <center>
-      <p>
-        Made with <span style="color: white">&hearts;</span> by <a href="https://github.com/felipedaraujo/doogle">@felipedaraujo</a>
-      </p>
+      <h1>Doogle</h1>
+      <%= form_tag('search', method: :get, remote: true, class: "js-search-doogle") do %>
+        <div class="form-group">
+          <%= text_field_tag :query, nil, class: "js-query form-control" %>
+        </div>
+        <%= submit_tag 'Doogle Search', class: 'btn btn-default' %>
+      <% end %>
+
+      <h3 class="js-message"></h3>
     </center>
-  </footer>
-</div>
+
+    <h3 class="js-entry"></h3>
+    <p class="js-definition"></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <center>
+    <p>
+      Made with <span style="color: white">&hearts;</span> by <a href="https://github.com/felipedaraujo/doogle">@felipedaraujo</a>
+    </p>
+  </center>
+</footer>
