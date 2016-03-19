@@ -13,5 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
-//= require_tree .
+//= require spark
+//= require pages/main/home
+//= require pages/main/home/searchDoogle
+
+$(function() {
+  Spark.init();
+});
