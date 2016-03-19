@@ -1,9 +1,20 @@
-require 'spec_helper'
-require 'dictionary_adapter'
+require 'rails_helper'
 
 describe DictionaryAdapter do
-  let(:base_uri) { "http://www.dictionaryapi.com/v1/" }
+  context '.search' do
+    it "returns a word" do
+      dictionary = DictionaryAdapter.new
+      word = {
+        status: :ok,
+        entry: 'existence',
+        definition: ':reality as opposed to appearance'
+      }
+      expect(dictionary.search('existence')).to eq(word)
+    end
 
-  describe "#search" do
+    it "does not return a word" do
+      dictionary = DictionaryAdapter.new
+      expect(dictionary.search('inesistente-word')).to eq(nil)
+    end
   end
 end
