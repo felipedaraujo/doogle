@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.1'
+
 gem 'rails', '4.2.0'
 gem 'pg', '~> 0.18.4'
 gem 'bootstrap-sass', '>= 3.3.6'
@@ -22,3 +24,5 @@ group :development, :test do
 end
 
 gem 'web-console', group: :development
+
+gem 'rails_12factor', group: :production
